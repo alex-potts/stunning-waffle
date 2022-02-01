@@ -194,6 +194,6 @@ if wrongGuesses >= 6:
     print("game over")
     print("your word was", "".join(word))
     
-dst_path = r"N:\\Documents\\python project\\mywords.txt"
-src_path = r"N:\\Documents\\mywords.txt"
+dst_path = r"N:/Documents/python project/mywords.txt"
+src_path = r"N:/Documents/mywords.txt"
 shutil.move(src_path, dst_path)

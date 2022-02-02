@@ -2,7 +2,9 @@ import random
 import turtle
 import time
 import shutil
+import os 
 
+exec(open("N:\\Documents\\python project\\mover.py").read())
 t = turtle.Turtle()
 t.x = -50
 t.y = 100

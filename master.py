@@ -14,7 +14,6 @@ while not os.path.exists('N:\\Documents\\python project\\cc.py'):
             while not os.path.exists(path):
                 urllib.request.urlretrieve(value, path)
                 print("Sucess")
-
     except:
         print("Failed")
         time.sleep(2)

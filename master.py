@@ -2,13 +2,6 @@ import urllib.request
 import time
 import os
 
-
-if not os.path.exists('N:\\Documents\\python project'):
-    directory = "python project"
-    parent_dir = "N:/Documents"
-    path = os.path.join(parent_dir, directory)
-    os.mkdir(path)
-
 projectList = {"hangman": 'https://raw.githubusercontent.com/alex-potts/stunning-waffle/main/hangman.py',
                "cc": 'https://raw.githubusercontent.com/alex-potts/stunning-waffle/main/Ceasar%20cipher.py',
               }

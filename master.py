@@ -2,15 +2,23 @@ import urllib.request
 import time
 import os
 
+p = os.getcwd()
+
 projectList = {"hangman": 'https://raw.githubusercontent.com/alex-potts/stunning-waffle/main/hangman.py',
                "cc": 'https://raw.githubusercontent.com/alex-potts/stunning-waffle/main/Ceasar%20cipher.py',
                }
 
+gameList = {1: p + 'python project/cc.py',
+            2: p + 'python project/hangman.py',
+            3: p + 'python project/rps.py',
+            4: p + 'python project/snake.py',
+            5: p + 'python project/wordle.py',
+            }
 
-while not os.path.exists('N:\\Documents\\python project\\cc.py'):
+while not os.path.exists(p + '\\python project\\cc.py'):
     try:
         for key, value in projectList.items():
-            path = "N:/Documents/python project/" + key + ".py"
+            path = p + "/python project/" + key + ".py"
             while not os.path.exists(path):
                 urllib.request.urlretrieve(value, path)
                 print("Sucess")
@@ -18,4 +26,10 @@ while not os.path.exists('N:\\Documents\\python project\\cc.py'):
         print("Failed")
         time.sleep(2)
 
-exec(open('N:/Documents/python project/hangman.py').read())
+def pick():
+    print(gameList)
+    x = input()
+    exec(open(gameList.get(x)).read())
+
+
+pick()

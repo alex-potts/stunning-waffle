@@ -3,17 +3,19 @@ import os
 import urllib.request
 import time
 
+pa = os.getcwd()
+
 
 def install(p):
     if not os.path.exists(p + '\\python project'):
         directory = "python project"
-        parent_dir = "N:/Documents"
+        parent_dir = p
         path = os.path.join(parent_dir, directory)
         os.mkdir(path)
 
     if os.path.exists(p + '/mywords.txt'):
-        src_path = r"N:\Documents\python project\mywords.txt"
-        dst_path = r"N:\Documents\mywords.txt"
+        src_path = p + "\python project\mywords.txt"
+        dst_path = p + "\mywords.txt"
         shutil.move(dst_path, src_path)
     elif not os.path.exists(p + '/python project/mywords.txt') and not os.path.exists(p + '/mywords.txt'):
         mywords = 'https://raw.githubusercontent.com/alex-potts/stunning-waffle/main/mywords.txt'
@@ -43,14 +45,18 @@ def install(p):
             print('Not much longer.....')
             time.sleep(2)
 
-print("You are about to install some python files to your computer!")
-print("They will be installed to the same directory as where this file is saved")
-check = input("If you want to continue type y: ")
-if check.lower()[0] == "y":
-    pa = os.getcwd()
-    install(pa)
+
+if os.path.exists(pa + "\\python project\\hangman.py"):
     exec(open(pa + "\\python project\\mover.py").read())
     exec(open(pa + "/python project/master.py").read())
 else:
-    print("Hope to see you again!")
-    exit()
+    print("You are about to install some python files to your computer!")
+    print("They will be installed to the same directory as where this file is saved")
+    check = input("If you want to continue type y: ")
+    if check.lower()[0] == "y":
+        install(pa)
+        exec(open(pa + "\\python project\\mover.py").read())
+        exec(open(pa + "/python project/master.py").read())
+    else:
+        print("Hope to see you again!")
+        exit()

@@ -1,6 +1,6 @@
 import shutil
 import os 
-p = os.getcwds()
+p = os.getcwd()
 if os.path.exists(p + '\python project\mywords.txt'):
   src_path = p + "\python project\mywords.txt"
   dst_path = p+ "\mywords.txt"

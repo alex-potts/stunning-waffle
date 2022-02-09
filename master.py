@@ -27,7 +27,8 @@ while not os.path.exists(p + '\\python project\\cc.py'):
         time.sleep(2)
 
 def pick():
-    print(gameList)
+    for index, key in enumerate(projectList.keys()):
+        print(index+1, key)
     x = input()
     exec(open(gameList.get(x)).read())
 

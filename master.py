@@ -29,6 +29,7 @@ while not os.path.exists(p + '\\python project\\cc.py'):
 def pick():
     for index, key in enumerate(projectList.keys()):
         print(index+1, key)
+    print("Enter the number of the game you want to play: ")
     x = input()
     exec(open(gameList.get(x)).read())
 

@@ -4,6 +4,7 @@ import time
 import shutil
 import os 
 
+p = os.getcwd()
 exec(open("N:\\Documents\\python project\\mover.py").read())
 t = turtle.Turtle()
 t.x = -50
@@ -196,6 +197,6 @@ if wrongGuesses >= 6:
     print("game over")
     print("your word was", "".join(word))
     
-dst_path = r"N:/Documents/python project/mywords.txt"
-src_path = r"N:/Documents/mywords.txt"
+dst_path = p + "/python project/mywords.txt"
+src_path = p + "/mywords.txt"
 shutil.move(src_path, dst_path)

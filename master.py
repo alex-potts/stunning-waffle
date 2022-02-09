@@ -8,8 +8,8 @@ projectList = {"hangman": 'https://raw.githubusercontent.com/alex-potts/stunning
                "cc": 'https://raw.githubusercontent.com/alex-potts/stunning-waffle/main/Ceasar%20cipher.py',
                }
 
-gameList = {1: p + 'python project/cc.py',
-            2: p + 'python project/hangman.py',
+gameList = {1: p + 'python project/hangman.py',
+            2: p + 'python project/cc.py',
             3: p + 'python project/rps.py',
             4: p + 'python project/snake.py',
             5: p + 'python project/wordle.py',

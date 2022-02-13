@@ -5,7 +5,7 @@ import shutil
 import os 
 
 p = os.getcwd()
-exec(open(p + "\\python project\\mover.py").read())
+exec(open(p + "\\mover.py").read())
 t = turtle.Turtle()
 t.x = -50
 t.y = 100
